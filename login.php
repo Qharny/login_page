@@ -23,43 +23,43 @@
             <div class="slider-tab"></div>
          </div>
          <div class="form-inner">
-            <form action="#" class="login">
+            <form action="database.php" class="login">
                <div class="field">
-                  <input type="text" placeholder="Email Address" required />
+                  <input type="text" name="mail" placeholder="Email Address" required />
                </div>
                <div class="field">
-                  <input type="password" placeholder="Password" required />
+                  <input type="password" name="password" placeholder="Password" required />
                </div>
                <div class="pass-link">
                   <a href="#">Forgot password?</a>
                </div>
                <div class="field btn">
                   <div class="btn-layer"></div>
-                  <input type="submit" value="Login" />
+                  <input type="submit" name="login" value="Login" />
                </div>
                <div class="signup-link">
                   Not a member? <a href="">Signup now</a>
                </div>
             </form>
-            <form action="#" class="signup">
+            <form action="database.php" class="signup">
                <div class="field">
-                  <input type="text" placeholder="Firstname" required />
+                  <input type="text" name="firtsname" placeholder="Firstname" required />
                </div>
                <div class="field">
-                  <input type="text" placeholder="Lastname" required />
+                  <input type="text" name="lastname" placeholder="Lastname" required />
                </div>
                <div class="field">
-                  <input type="text" placeholder="Email Address" required />
+                  <input type="text" name="email" placeholder="Email Address" required />
                </div>
                <div class="field">
-                  <input type="password" placeholder="Password" id="password" required />
+                  <input type="password" name="pass" placeholder="Password" id="password" required />
                </div>
                <div class="field">
-                  <input type="password" placeholder="Confirm password" id="confirm password" required />
+                  <input type="password" name="con_password" placeholder="Confirm password" id="confirm password" required />
                </div>
                <div class="field btn">
                   <div class="btn-layer"></div>
-                  <input type="submit" value="Signup" id="btn" onclick="matchpassword()" />
+                  <input type="submit" name="signup" value="Signup" id="btn" onclick="matchpassword()" />
                </div>
             </form>
          </div>
