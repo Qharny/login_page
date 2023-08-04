@@ -134,6 +134,9 @@ form .field input:focus::placeholder{
 .form-inner form .pass-link{
   margin-top: 5px;
 }
+.form-inner form .pass-link a:hover{
+  color: goldenrod;
+}
 .form-inner form .signup-link{
   text-align: center;
   margin-top: 30px;
@@ -146,6 +149,7 @@ form .field input:focus::placeholder{
 .form-inner form .pass-link a:hover,
 .form-inner form .signup-link a:hover{
   text-decoration: underline;
+  color: goldenrod;
 }
 form .btn{
   height: 50px;
@@ -153,6 +157,9 @@ form .btn{
   border-radius: 5px;
   position: relative;
   overflow: hidden;
+}
+form .btn:hover .btn-layer{
+  background: goldenrod;
 }
 form .btn .btn-layer{
   height: 100%;
