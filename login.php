@@ -3,29 +3,35 @@
 
 <head>
    <meta charset="utf-8" />
-   <title>Login and Registration Form in HTML | CodingNepal</title>
-   <link rel="stylesheet" href="style.css" />
+   <title>Login and Registration Form</title>
+   <link rel="stylesheet" href="style.css">
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</head> 
+</head>
 
 <body>
    <div class="wrapper">
       <div class="title-text">
+         <!-- Titles for login and signup sections -->
          <div class="title login">Login</div>
          <div class="title signup">Signup</div>
       </div>
+      <!-- Container for the form -->
       <div class="form-container">
          <div class="slide-controls">
+            <!-- Radio inputs to control the sliding -->
             <input type="radio" name="slide" id="login" checked />
             <input type="radio" name="slide" id="signup" />
+            <!-- Labels for login and signup buttons -->
             <label for="login" class="slide login">Login</label>
             <label for="signup" class="slide signup">Signup</label>
+            <!-- Slider tab -->
             <div class="slider-tab"></div>
          </div>
          <div class="form-inner">
-            <form action="database.php" class="login">
+            <!-- Login form -->
+            <form action="database.php" class="login" method="post" autocomplete="off">
                <div class="field">
-                  <input type="text" name="mail" placeholder="Email Address" required />
+                  <input type="text" name="mail" placeholder="Email or Username" required />
                </div>
                <div class="field">
                   <input type="password" name="password" placeholder="Password" required />
@@ -40,13 +46,15 @@
                <div class="signup-link">
                   Not a member? <a href="">Signup now</a>
                </div>
-            </form>
-            <form action="database.php" class="signup">
+            </form><!-- End of Login form -->
+
+            <!-- Signup form -->
+            <form action="signup_database.php" class="signup" method="post" autocomplete="off">
                <div class="field">
-                  <input type="text" name="firtsname" placeholder="Firstname" required />
+                  <input type="text" name="fullname" placeholder="Full Name" min="5" required />
                </div>
                <div class="field">
-                  <input type="text" name="lastname" placeholder="Lastname" required />
+                  <input type="text" name="username" placeholder="Username" required />
                </div>
                <div class="field">
                   <input type="text" name="email" placeholder="Email Address" required />
@@ -55,32 +63,20 @@
                   <input type="password" name="pass" placeholder="Password" id="password" required />
                </div>
                <div class="field">
-                  <input type="password" name="con_password" placeholder="Confirm password" id="confirm password" required />
+                  <input type="password" name="con_password" placeholder="Confirm password" id="confirm-password" required />
                </div>
                <div class="field btn">
                   <div class="btn-layer"></div>
-                  <input type="submit" name="signup" value="Signup" id="btn" onclick="matchpassword()" />
+                  <input type="submit" name="signup" value="Signup" id="btn" onclick="matchpassword()">
                </div>
-            </form>
+            </form><!-- End of Signup form -->
          </div>
       </div>
    </div>
    <script>
-      function matchpassword() {
-         let inputpassword = document.getElementById("password").value;
-         console.log("password: ", password);
+      // JavaScript code for form interaction
 
-         let inputconfirmpassword =
-            document.getElementById("Confirm password").value;
-         if (inputpassword == inputconfirmpassword) {
-            alert("password created sucessfully");
-         } else {
-            alert("password does not match");
-            return false;
-         }
-         document.forms["loginform"].submit();
-      }
-
+      // Sliding effect between login and signup forms
       const loginText = document.querySelector(".title-text .login");
       const loginForm = document.querySelector("form.login");
       const loginBtn = document.querySelector("label.login");

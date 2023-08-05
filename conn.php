@@ -1,19 +1,21 @@
 <?php
+    // Start a new or resume an existing session
     session_start();
     
-    $host = "localhost";
-    $user_name="root";
-    $pass = "";
-    $db_name = "my_database";
+    // Database connection parameters
+    $host = "localhost";        // Database host
+    $user_name = "root";        // Database username
+    $pass = "";                // Database password
+    $db_name = "my_database";   // Database name
 
+    // Establish a connection to the database
     $my_connection = mysqli_connect($host, $user_name, $pass, $db_name);
 
-    if($my_connection){
-        echo "Connected to database Successfully";
-    }
-    else{
-        die("Connection Failed".mysqli_error());
-    }
-
-
+    // Check if the connection was successful
+    // if($my_connection){
+    //     echo "Connected to database Successfully"; // Display a success message if connected
+    // }
+    // else{
+    //     die("Connection Failed" . mysqli_error()); // Display an error message if connection failed
+    // }
 ?>

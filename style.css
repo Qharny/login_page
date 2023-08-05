@@ -1,41 +1,60 @@
+/* Importing the 'Poppins' font from Google Fonts */
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-*{
+
+/* Resetting default styling for all elements */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-html,body{
+
+/* Styling for the HTML and body elements */
+html,
+body {
   display: grid;
   height: 100%;
   width: 100%;
   place-items: center;
   background: whitesmoke;
+  justify-content: center;
+  align-items: center;
+  background-attachment: fixed;
 }
-::selection{
+
+/* Styling for selected text */
+::selection {
   background: whitesmoke;
   color: #000;
 }
-.wrapper{
+
+/* Styling for the main container */
+.wrapper {
   overflow: hidden;
   max-width: 390px;
   background: #fff;
   padding: 30px;
   border-radius: 5px;
-  box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
 }
-.wrapper .title-text{
+
+/* Styling for the title section */
+.wrapper .title-text {
   display: flex;
   width: 200%;
 }
-.wrapper .title{
+
+/* Styling for the title text */
+.wrapper .title {
   width: 50%;
   font-size: 35px;
   font-weight: 600;
   text-align: center;
-  transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
-.wrapper .slide-controls{
+
+/* Styling for the slide controls */
+.wrapper .slide-controls {
   position: relative;
   display: flex;
   height: 50px;
@@ -46,7 +65,9 @@ html,body{
   border: 1px solid lightgrey;
   border-radius: 5px;
 }
-.slide-controls .slide{
+
+/* Styling for each slide control item */
+.slide-controls .slide {
   height: 100%;
   width: 100%;
   color: #fff;
@@ -58,10 +79,14 @@ html,body{
   z-index: 1;
   transition: all 0.6s ease;
 }
-.slide-controls label.signup{
+
+/* Styling for the 'signup' label */
+.slide-controls label.signup {
   color: #000;
 }
-.slide-controls .slider-tab{
+
+/* Styling for the slider tab */
+.slide-controls .slider-tab {
   position: absolute;
   height: 100%;
   width: 50%;
@@ -69,47 +94,69 @@ html,body{
   z-index: 0;
   border-radius: 5px;
   background: goldenrod;
-  transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
-input[type="radio"]{
+
+/* Styling for radio input (hidden) for signup section */
+input[type="radio"] {
   display: none;
 }
-#signup:checked ~ .slider-tab{
+
+/* Styling for slider tab when signup is checked */
+#signup:checked~.slider-tab {
   left: 50%;
 }
-#signup:checked ~ label.signup{
+
+/* Styling for 'signup' label when signup is checked */
+#signup:checked~label.signup {
   color: #fff;
   cursor: default;
   user-select: none;
 }
-#signup:checked ~ label.login{
+
+/* Styling for 'login' label when signup is checked */
+#signup:checked~label.login {
   color: #000;
 }
-#login:checked ~ label.signup{
+
+/* Styling for 'signup' label when login is checked */
+#login:checked~label.signup {
   color: #000;
 }
-#login:checked ~ label.login{
+
+/* Styling for 'login' label when login is checked */
+#login:checked~label.login {
   cursor: default;
   user-select: none;
 }
-.wrapper .form-container{
+
+/* Styling for the form container */
+.wrapper .form-container {
   width: 100%;
   overflow: hidden;
 }
-.form-container .form-inner{
+
+/* Styling for the inner form container */
+.form-container .form-inner {
   display: flex;
   width: 200%;
 }
-.form-container .form-inner form{
+
+/* Styling for the form inside the inner container */
+.form-container .form-inner form {
   width: 50%;
-  transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
-.form-inner form .field{
+
+/* Styling for form fields */
+.form-inner form .field {
   height: 50px;
   width: 100%;
   margin-top: 20px;
 }
-.form-inner form .field input{
+
+/* Styling for form field inputs */
+.form-inner form .field input {
   height: 100%;
   width: 100%;
   outline: none;
@@ -120,60 +167,85 @@ input[type="radio"]{
   font-size: 17px;
   transition: all 0.3s ease;
 }
-.form-inner form .field input:focus{
+
+/* Styling for form field input on focus */
+.form-inner form .field input:focus {
   border-color: goldenrod;
-  /* box-shadow: inset 0 0 3px #fb6aae; */
 }
-.form-inner form .field input::placeholder{
+
+/* Styling for placeholder text in form inputs */
+.form-inner form .field input::placeholder {
   color: #999;
   transition: all 0.3s ease;
 }
-form .field input:focus::placeholder{
+
+/* Styling for placeholder text on focus */
+form .field input:focus::placeholder {
   color: #b3b3b3;
 }
-.form-inner form .pass-link{
+
+/* Styling for password reset link */
+.form-inner form .pass-link {
   margin-top: 5px;
 }
-.form-inner form .pass-link a:hover{
+
+/* Styling for password reset link on hover */
+.form-inner form .pass-link a:hover {
   color: goldenrod;
 }
-.form-inner form .signup-link{
+
+/* Styling for signup link */
+.form-inner form .signup-link {
   text-align: center;
   margin-top: 30px;
 }
+
+/* Styling for signup link and password reset link */
 .form-inner form .pass-link a,
-.form-inner form .signup-link a{
+.form-inner form .signup-link a {
   color: whitesmoke;
   text-decoration: none;
 }
+
+/* Styling for signup link and password reset link on hover */
 .form-inner form .pass-link a:hover,
-.form-inner form .signup-link a:hover{
+.form-inner form .signup-link a:hover {
   text-decoration: underline;
   color: goldenrod;
 }
-form .btn{
+
+/* Styling for form submit button */
+form .btn {
   height: 50px;
   width: 100%;
   border-radius: 5px;
   position: relative;
   overflow: hidden;
 }
-form .btn:hover .btn-layer{
+
+/* Styling for form submit button layer on hover */
+form .btn:hover .btn-layer {
   background: goldenrod;
 }
-form .btn .btn-layer{
+
+/* Styling for form submit button layer */
+form .btn .btn-layer {
   height: 100%;
   width: 300%;
   position: absolute;
   left: -100%;
   background: whitesmoke;
   border-radius: 5px;
-  transition: all 0.4s ease;;
+  transition: all 0.4s ease;
 }
-form .btn:hover .btn-layer{
+
+/* Styling for form submit button layer on hover */
+form .btn:hover .btn-layer {
   left: 0;
 }
-form .btn input[type="submit"]{
+
+/* Styling for form submit button input */
+form .btn input[type="submit"] {
   height: 100%;
   width: 100%;
   z-index: 1;
